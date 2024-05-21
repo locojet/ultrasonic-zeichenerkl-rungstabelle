@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zeichenerklärungstabelle</title>
+    <script src="main.js"></script>
+    
+    
+</head>
+<body>
+
+<h2>Zeichenerklärungstabelle</h2>
+
+<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Suche nach Zeichen..">
+
+<table id="dataTable">
+    <thead>
+        <tr>
+            <th>Nr.</th>
+            <th>Kurz- oder Formelzeichen</th>
+            <th>Einheit</th>
+            <th>Benennung</th>
+            <th>Definition - Bemerkungen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1.1.1</td>
+            <td>T</td>
+            <td>s</td>
+            <td>Periodendauer</td>
+            <td>Dauer einer Schwingungsperiode oder eines Schwingungszyklus' (auch: Schwingungsdauer)</td>
+        </tr>
+        <tr>
+            <td>1.1.2</td>
+            <td>f</td>
+            <td>Hz, MHz</td>
+            <td>Frequenz</td>
+            <td>Anzahl der Schwingungen je Zeiteinheit. Hz = 1/s; MHz = 10<sup>6</sup> Hz = 1/µs</td>
+        </tr>
+        <tr>
+            <td>1.1.3</td>
+            <td>A</td>
+            <td>mm</td>
+            <td>Amplitude</td>
+            <td>Größte Auslenkung eines schwingenden Teilchens aus der Null- oder Ruhelage</td>
+        </tr>
+        <tr>
+            <td>1.1.4</td>
+            <td>φ, phi</td>
+            <td>Grad°</td>
+            <td>Phase</td>
+            <td>Augenblickszustand einer Schwingung</td>
+        </tr>
+        <tr>
+            <td>1.1.5</td>
+            <td>c</td>
+            <td>m/s, mm/µs</td>
+            <td>Schallgeschwindigkeit</td>
+            <td>Geschwindigkeit, mit der sich die Front einer Schallwelle ausbreitet. Indizes: Wellenart, Medium (Werkstoff)</td>
+        </tr>
+        <tr>
+            <td>1.1.6</td>
+            <td>λ, lambda</td>
+            <td>mm</td>
+            <td>Wellenlänge</td>
+            <td>Abstand zweier benachbarter Punkte gleicher Phase einer Welle, gemessen in deren Ausbreitungsrichtung</td>
+        </tr>
+        <tr>
+            <td>1.1.7</td>
+            <td>κ (α), kappa (alpha)</td>
+            <td>dB/mm, dB/m</td>
+            <td>Schallschwächungskoeffizient</td>
+            <td>Die auf den Schallaufweg (doppelter Schallweg) bezogene Verminderung der Schalldruckamplitude infolge Absorption und Streuung. κ<sub>1</sub>: vom Justier- o. Vergleichskörper; κ<sub>2</sub>: vom Prüfgegenstand</td>
+        </tr>
+        <tr>
+            <td>1.1.8</td>
+            <td>Z</td>
+            <td>kg/m²s</td>
+            <td>Schallwellenwiderstand</td>
+            <td>Produkt aus Schallgeschwindigkeit und Dichte eines Mediums. Gebräuchlich ist auch die Einheit Ns/m<sup>3</sup></td>
+        </tr>
+        <tr>
+            <td>1.2.1</td>
+            <td>L</td>
+            <td>Index</td>
+            <td>Longitudinalwelle</td>
+            <td>Welle, die sich in Schwingungsrichtung der einzelnen Teilchen eines Mediums ausbreitet</td>
+        </tr>
+        <tr>
+            <td>1.2.2</td>
+            <td>T</td>
+            <td>Index</td>
+            <td>Transversalwelle</td>
+            <td>Welle, die sich quer zur Schwingungsrichtung der einzelnen Teilchen eines Mediums ausbreitet</td>
+        </tr>
+
+        <tr>
+            <td>1.3.1</td>
+            <td>α, alpha</td>
+            <td>Grad°</td>
+            <td>Einfallswinkel</td>
+            <td>Winkel zwischen dem einfallenden Schallstrahl und der Normalen zur Grenzfläche. Indizes: Wellenart, Medium</td>
+        </tr>
+        <tr>
+            <td>1.3.2</td>
+            <td>α, alpha</td>
+            <td>Grad°</td>
+            <td>Brechungswinkel</td>
+            <td>Winkel zwischen dem gebrochenen Schallstrahl und der Normalen zur Grenzfläche. Indizes: Wellenart, Medium</td>
+        </tr>
+        <tr>
+            <td>1.3.3</td>
+            <td>ε, epsilon</td>
+            <td>Grad°</td>
+            <td>Auftreffwinkel</td>
+            <td>Winkel zwischen einem einfallenden Schallstrahl und der Normalen zur Grenzfläche im Auftreffpunkt am Reflektor</td>
+        </tr>
+        <tr>
+            <td>1.3.4</td>
+            <td>β, beta</td>
+            <td>Grad°</td>
+            <td>Reflexionswinkel</td>
+            <td>Winkel zwischen dem reflektierten Schallstrahl und der Flächennormalen der reflektierenden Grenzfläche. Indizes: Wellenart, Medium</td>
+        </tr>
+        <tr>
+            <td>2.1.1</td>
+            <td>SPK</td>
+            <td>-</td>
+            <td>Senkrechtprüfkopf</td>
+            <td>Prüfkopf für Senkrechteinschallung, d.h. in Richtung der Normalen zur Prüffläche</td>
+        </tr>
+        <tr>
+            <td>2.1.2</td>
+            <td>SEPK</td>
+            <td>-</td>
+            <td>SE-Prüfkopf</td>
+            <td>Prüfkopf mit elektrisch und akustisch getrennten Sende- und Empfangsschwingern</td>
+        </tr>
+        <tr>
+            <td>2.1.3</td>
+            <td>WPK</td>
+            <td>-</td>
+            <td>Winkelprüfkopf</td>
+            <td>Prüfkopf für Schrägeinschallung. D<sub>eff</sub> > 13 mm (willkürliche Grenze)</td>
+        </tr>
+        <tr>
+            <td>2.1.4</td>
+            <td>M</td>
+            <td>-</td>
+            <td>Miniaturbauart</td>
+            <td>Prüfköpfe mit D<sub>eff</sub> ≤ 13 mm (willkürliche Grenze), z.B. MWPK für Miniaturwinkelprüfkopf</td>
+        </tr>
+        <tr>
+            <td>2.2.1</td>
+            <td>D<sub>eff</sub>, D</td>
+            <td>mm</td>
+            <td>Schwingerdurchmesser</td>
+            <td>D<sub>eff</sub>: Akustisch wirksamer Durchmesser des Schwingers (Effektiver Schwingerdurchmesser); D: Geometrischer Schwingerdurchmesser</td>
+        </tr>
+        <tr>
+            <td>2.2.2</td>
+            <td>a; b</td>
+            <td>mm</td>
+            <td>Schwingerabmessungen</td>
+            <td>Bei Rechteckschwingern (a;b: kleinere;größere Schwingerabmessung)</td>
+        </tr>
+        <tr>
+            <td>2.2.3</td>
+            <td>d</td>
+            <td>mm</td>
+            <td>Dicke des Schwingers</td>
+            <td>Schwingerdicke, bestimmend für die Resonanzfrequenz</td>
+        </tr>
+        <tr>
+            <td>2.2.4</td>
+            <td>l<sub>v</sub></td>
+            <td>mm</td>
+            <td>Länge der Vorlaufstrecke</td>
+            <td>Geometrischer Abstand vom Schwinger zur Prüffläche, auf dem Hauptstrahl gemessen</td>
+        </tr>
+        <tr>
+            <td>2.2.5</td>
+            <td>x<sub>ist</sub></td>
+            <td>mm</td>
+            <td>x-Maß</td>
+            <td>Bei WPK: Der gemessene Abstand von der Prüfkörperkante bis zu der Stelle des Prüfkopfs, an der der Hauptstrahl austritt</td>
+        </tr>
+        <tr>
+            <td>2.2.6</td>
+            <td>x<sub>Nenn</sub></td>
+            <td>mm</td>
+            <td>Nennwert vom x-Maß</td>
+            <td>Das vom Hersteller angegebene bzw. am Prüfkopf markierte x-Maß</td>
+        </tr>
+        <tr>
+            <td>2.2.7</td>
+            <td>Δx</td>
+            <td>mm</td>
+            <td>Abweichung</td>
+            <td>Abweichung zwischen x<sub>ist</sub> und x<sub>Nenn</sub>. Δx = x<sub>ist</sub> - x<sub>Nenn</sub></td>
+        </tr>
+        <tr>
+            <td>2.2.8</td>
+            <td>A<sub>p</sub></td>
+            <td>mm</td>
+            <td>Prüfkopfaufdehnung</td>
+            <td>Bei der Prüfung gekrümmter Teile, die Ausdehnung des Prüfkopfs in Krümmungsrichtung</td>
+        </tr>
+        <tr>
+            <td>2.3.1</td>
+            <td>α<sub>Nenn</sub>, alpha</td>
+            <td>Grad°</td>
+            <td>Nennwinkel</td>
+            <td>Der am Prüfkopf angegebene Einschallwinkel für Stahl</td>
+        </tr>
+        <tr>
+            <td>2.3.2</td>
+            <td>α<sub>ist</sub>, alpha</td>
+            <td>Grad°</td>
+            <td>Einschallwinkel</td>
+            <td>Gemessener Winkel zwischen dem Hauptstrahl im Prüfgegenstand und der Normalen zur Prüffläche (auch: wahrer Einschallwinkel, Ist-Wert des Einschallwinkels oder Arbeitswinkel)</td>
+        </tr>
+        <tr>
+            <td>2.3.3</td>
+            <td>α<sub>max</sub>, alpha</td>
+            <td>Grad°</td>
+            <td>Maximaler Einschallwinkel</td>
+            <td>Der maximal zulässige Einschallwinkel (üblich bei der Prüfung gekrümmter Teile)</td>
+        </tr>
+        <tr>
+            <td>2.3.4</td>
+            <td>δ, delta</td>
+            <td>Grad°</td>
+            <td>Schielwinkel</td>
+            <td>Bei WPK: Winkel zwischen dem auf die Prüffläche projizierten Hauptstrahl und der Längsachse des Prüfkopfgehäuses. Bei SPK: Winkel zwischen der akustischen Achse und der Prüfkopfachse</td>
+        </tr>
+        <tr>
+            <td>2.3.5</td>
+            <td>θ, theta</td>
+            <td>Grad°</td>
+            <td>Divergenzwinkel</td>
+            <td>Winkel zwischen Hauptstrahl und Randstrahl für einen bestimmten Schalldruckabfall in dB, z.B. -6 dB, -20 dB. Bei WPK: für die Einschallebenen θ<sub>+θ</sub> (nach oben) und θ<sub>-θ</sub> (nach unten)</td>
+        </tr>
+        <tr>
+            <td>2.3.6</td>
+            <td>N<sub>ges</sub></td>
+            <td>mm</td>
+            <td>Nahfeldlänge</td>
+            <td>Entfernung zwischen Schwingeroberfläche und letztem Interferenzmaximum (Nahfeldende), gemessen auf dem Hauptstrahl</td>
+        </tr>
+        <tr>
+            <td>2.3.7</td>
+            <td>N<sub>St</sub></td>
+            <td>mm</td>
+            <td>Nahfeldlänge in Stahl</td>
+            <td>Entfernung zwischen dem Schalleintrittspunkt und dem Nahfeldende in einem Prüfgegenstand aus Stahl</td>
+        </tr>
+        <tr>
+            <td>2.3.8</td>
+            <td>s<sub>g</sub></td>
+            <td>mm</td>
+            <td>Werkstoffäquivalent der Vorlaufstrecke</td>
+            <td>Mit US gemessener Schallwellenanteil im Vorlaufkeil oder in der Vorlaufstrecke, bezogen auf die Wellenart und den Werkstoff, für die Justiert wurde</td>
+        </tr>
+        <tr>
+            <td>2.3.9</td>
+            <td>s<sub>v</sub></td>
+            <td>mm</td>
+            <td>Schallfeldäquivalent der Vorlaufstrecke</td>
+            <td>Anteil der Nahfeldlänge im Vorlaufkeil. s<sub>v</sub> = N<sub>ges</sub> - N<sub>St</sub></td>
+        </tr>
+        <tr>
+            <td>2.3.10</td>
+            <td>D<sub>Fokus</sub></td>
+            <td>mm</td>
+            <td>Schallbündeldurchmesser</td>
+            <td>Bei einem bestimmten Schallweg (s<sub>N</sub>), der Durchmesser des Schallbündels für einen bestimmten Schalldruckabfall, bezogen auf den Hauptstrahl (z.B. -6dB, -20dB)</td>
+        </tr>
+        <tr>
+            <td>2.3.11</td>
+            <td>D<sub>Fokus</sub></td>
+            <td>mm</td>
+            <td>Fokusdurchmesser</td>
+            <td>Kleinster Bündeldurchmesser eines Schallfeldes</td>
+        </tr>
+        <tr>
+            <td>3.1.1</td>
+            <td>s<sub>lauf</sub></td>
+            <td>mm</td>
+            <td>Schalllaufweg</td>
+            <td>Der vom Schall oder von einem Schallimpuls tatsächlich zurückgelegte Weg. s<sub>lauf</sub> = 2 * s</td>
+        </tr>
+        <tr>
+            <td>3.1.2</td>
+            <td>s</td>
+            <td>mm</td>
+            <td>Schallweg</td>
+            <td>Entfernung zwischen Schallauftrittspunkt und Reflektor. Bei der Impuls-Echo-Technik der halbe Schallaufweg (s = s<sub>lauf</sub>/2). Bei Schrägeinschallung Hypothenuse des "Fehlerdreiecks".</td>
+        </tr>
+        <tr>
+            <td>3.1.3</td>
+            <td>T</td>
+            <td>Skt</td>
+            <td>Anzeigenlage</td>
+            <td>Lage des Fußpunktes einer Anzeige bezogen auf die Bildschirmhorizontalen</td>
+        </tr>
+        <tr>
+            <td>3.1.4</td>
+            <td>T<sub>B</sub></td>
+            <td>Skt</td>
+            <td>Skalenbereich</td>
+            <td>Nutzbare Bildschirmbreite in Skalenteilen (meist 10 Skt)</td>
+        </tr>
+        <tr>
+            <td>3.1.5</td>
+            <td>k</td>
+            <td>mm Skt</td>
+            <td>Skalenfaktor</td>
+            <td>Proportionalitätsfaktor zwischen der abgebildeten Größe (z.B. Schallweg, Projektionsabstand, verkürzter Projektionsabstand) und den Skalenteilen</td>
+        </tr>
+        <tr>
+            <td>3.2.1</td>
+            <td>s<sub>B</sub></td>
+            <td>mm</td>
+            <td>Justierbereich</td>
+            <td>Der am Bildschirm auf T<sub>B</sub> abgebildete Bereich in Schallwegen</td>
+        </tr>
+        <tr>
+            <td>3.2.2</td>
+            <td>a<sub>B</sub></td>
+            <td>mm</td>
+            <td>Justierbereich</td>
+            <td>Der am Bildschirm auf T<sub>B</sub> abgebildete Bereich in Projektionsabständen</td>
+        </tr>
+        <tr>
+            <td>3.2.3</td>
+            <td>b<sub>B</sub></td>
+            <td>mm</td>
+            <td>Justierbereich</td>
+            <td>Der am Bildschirm auf T<sub>B</sub> abgebildete Bereich in verkürzten Projektionsabständen</td>
+        </tr>
+        <tr>
+            <td>3.2.4</td>
+            <td>s<sub>j</sub></td>
+            <td>mm</td>
+            <td>Justierstrecke(n)</td>
+            <td>Schallweg(e) zum Justierreflektor</td>
+        </tr>
+        <tr>
+            <td>3.2.5</td>
+            <td>T<sub>j</sub></td>
+            <td>Skt</td>
+            <td>Justierechoposition(en)</td>
+            <td>Position des (der) Justierechos, T<sub>j</sub>(Skala): Justiermarkenposition bei der AVG-Skala</td>
+        </tr>
+        <tr>
+            <td>3.3.2</td>
+            <td>T<sub>k</sub></td>
+            <td>Skt</td>
+            <td>Kontrollechoposition</td>
+            <td>Schallweg zum Kontrollreflektor</td>
+        </tr>
+        <tr>
+            <td>4.1.1</td>
+            <td>d</td>
+            <td>mm</td>
+            <td>Wanddicke</td>
+            <td>In technischen Zeichnungen und Regelwerken wird die Wanddicke meist mit d bezeichnet</td>
+        </tr>
+        <tr>
+            <td>4.1.2</td>
+            <td>D</td>
+            <td>mm</td>
+            <td>Außendurchmesser</td>
+            <td>Bei gekrümmten Prüfgegenständen (z.B. Rohre, Behälter, Stutzen)</td>
+        </tr>
+        <tr>
+            <td>4.1.3</td>
+            <td>R</td>
+            <td>mm</td>
+            <td>Radius</td>
+            <td>(D/2)</td>
+        </tr>
+        <tr>
+            <td>4.1.4</td>
+            <td>d/D</td>
+            <td>-</td>
+            <td>Wanddicken-Durchmesser-Verhältnis</td>
+            <td>Bei gekrümmten Prüfgegenständen (z.B. Rohre, Behälter, Stutzen). In technischen Regelwerken wird dieses Verhältnis meist mit s/D bezeichnet</td>
+        </tr>
+        <tr>
+            <td>4.2.1</td>
+            <td>K1</td>
+            <td>-</td>
+            <td>Kontrollkörper 1</td>
+            <td>Kontrollkörper nach DIN 54 120 mit Reflektoren, an denen u.a. die Entfernungsjustierung, die Empfindlichkeitsjustierung sowie die Kontrolle des Gerätesystems durchgeführt werden kann</td>
+        </tr>
+        <tr>
+            <td>4.2.2</td>
+            <td>K2</td>
+            <td>-</td>
+            <td>Kontrollkörper 2</td>
+            <td>Kontrollkörper nach DIN 54 122 (Verwendung wie K1)</td>
+        </tr>
+        <tr>
+            <td>4.2.3</td>
+            <td>JK</td>
+            <td>-</td>
+            <td>Justierkörper</td>
+            <td>Körper zur Entfernungs- und/oder Empfindlichkeitsjustierung</td>
+        </tr>
+        <tr>
+            <td>4.2.4</td>
+            <td>VK</td>
+            <td>-</td>
+            <td>Vergleichskörper</td>
+            <td>An den Prüfgegenstand hinsichtlich Geometrie und akustischer Eigenschaften angepasster Körper mit Vergleichsreflektoren</td>
+        </tr>
+        <tr>
+            <td>4.2.5</td>
+            <td>V1</td>
+            <td>-</td>
+            <td>Vergleichskörper V1</td>
+            <td>Übungsstück und Vergleichskörper für DGZfP-Kurse</td>
+        </tr>
+        <tr>
+            <td>4.2.6</td>
+            <td>P2</td>
+            <td>-</td>
+            <td>Vergleichskörper P2</td>
+            <td>Übungsstück und Vergleichskörper für DGZfP-Kurse</td>
+        </tr>
+        <tr>
+            <td>4.3</td>
+            <td>OSt</td>
+            <td>-</td>
+            <td>Übungsstück</td>
+            <td>Prüfgegenstand zu Übungszwecken</td>
+        </tr>
+        <tr>
+            <td>5.1.1</td>
+            <td>S</td>
+            <td>-</td>
+            <td>Sendeimpulsanzeige</td>
+            <td>Elektrischer Impuls, der im Schwinger in einen akustischen Impuls umgewandelt wird und bei Impuls-Echo-Technik zu einer Anzeige auf dem Bildschirm führt</td>
+        </tr>
+        <tr>
+            <td>5.1.2</td>
+            <td>S</td>
+            <td>-</td>
+            <td>Störzonenanzeige (-echo)</td>
+            <td>Anzeigen bei WPK, die am Bildschirm bei kurzen Laufzeiten erscheinen und von Reflexionen an der Prüffläche u/o im Prüfkopf herrühren</td>
+        </tr>
+        <tr>
+            <td>5.1.3</td>
+            <td>E</td>
+            <td>-</td>
+            <td>Eintrittsecho</td>
+            <td>Echo von der Prüffläche bei Verwendung einer Vorlaufstrecke</td>
+        </tr>
+        <tr>
+            <td>5.1.4</td>
+            <td>O</td>
+            <td>-</td>
+            <td>Oberkopelecho</td>
+            <td>Anzeigen bei SEPK, die am Bildschirm bei kurzen Laufzeiten erscheinen und auf die nicht vollständige elektrische oder akustische Trennung von Sender und Empfänger zurückzuführen sind</td>
+        </tr>
+        <tr>
+            <td>5.2.1</td>
+            <td>N</td>
+            <td>-</td>
+            <td>Nebenecho</td>
+            <td>Echo, das durch streifenden Einfall von LW mit Wellenumwandlung bei Senkrechteinschallung in Prüfgegenständen mit parallelen Begrenzungsflächen entsteht</td>
+        </tr>
+        <tr>
+            <td>5.2.2</td>
+            <td>RW∞</td>
+            <td>-</td>
+            <td>Rückwand</td>
+            <td>Flächenhafter ebener und vom Hauptstrahl senkrecht getroffener Reflektor, der größer als der Bündeldurchmesser am Ort des Reflektors ist</td>
+        </tr>
+        <tr>
+            <td>5.2.3</td>
+            <td>R<sub>m</sub><sup>n</sup></td>
+            <td>-</td>
+            <td>Rückwandecho</td>
+            <td>Echo einer Rückwand. Indizes: m: Mehrfachecho-Nr.; n: Index zur Bezeichnung eines Echos, das durch Mehrfachreflexion entstanden ist. R<sub>m</sub><sup>n</sup>: Echo einer Rückwand oder eines Reflektors in einem Prüfgegenstand</td>
+        </tr>
+        <tr>
+            <td>5.2.4</td>
+            <td>A</td>
+            <td>-</td>
+            <td>Absatz/Absatzecho</td>
+            <td>Echo eines Querschnitt-Absatzes bei Senkrechteinschallung. Indizes: siehe 5.2.3</td>
+        </tr>
+        <tr>
+            <td>5.2.5</td>
+            <td>Q</td>
+            <td>-</td>
+            <td>Querbohrung/Querbohrungsecho</td>
+            <td>Echo eines zylindrischen Reflektors, länger als der Bündeldurchmesser und vom Hauptstrahl senkrecht zur Achse getroffen</td>
+        </tr>
+        <tr>
+            <td>5.2.6</td>
+            <td>D<sub>Z</sub>, D<sub>Q</sub></td>
+            <td>mm</td>
+            <td>Bohrungsdurchmesser</td>
+            <td>Durchmesser eines zylindrischen Reflektors bzw. einer Querbohrung</td>
+        </tr>
+        <tr>
+            <td>5.2.7</td>
+            <td>KSR</td>
+            <td>-</td>
+            <td>Kreisscheiben-Reflektor</td>
+            <td>Kreisförmiger Reflektor (z.B. Flachbodenbohrung) der senkrecht vom Hauptstrahl getroffen und kleiner als der Bündeldurchmesser ist</td>
+        </tr>
+        <tr>
+            <td>5.2.8</td>
+            <td>D<sub>K</sub>, D<sub>KSR</sub></td>
+            <td>mm</td>
+            <td>Kreisscheibendurchmesser</td>
+            <td>Durchmesser einer Kreisscheibenreflektors oder einer Flachbodenbohrung</td>
+        </tr>
+        <tr>
+            <td>5.2.9</td>
+            <td>K</td>
+            <td>-</td>
+            <td>Kreisscheibenecho</td>
+            <td>Echo eines Kreisscheibenreflektors</td>
+        </tr>
+        <tr>
+            <td>5.2.10</td>
+            <td>W</td>
+            <td>-</td>
+            <td>Winkelspiegelecho</td>
+            <td>Anzeige, die durch Reflexion an zwei rechtwinklig aneinander grenzenden Flächen (Kante, Nut) bei Schrägeinschallung entsteht. Auch Kanten-echo genannt</td>
+        </tr>
+        <tr>
+            <td>5.2.11</td>
+            <td>Z</td>
+            <td>-</td>
+            <td>Zusatzecho</td>
+            <td>Formecho, das bei Radialeinschallung in Rundmaterial durch Dreiecksreflexion mit (Z<sub>2</sub>) bzw. ohne (Z<sub>1</sub>) Wellenumwandlung entsteht</td>
+        </tr>
+        <tr>
+            <td>5.3</td>
+            <td>m<sup>n</sup></td>
+            <td>-</td>
+            <td>Ungänzenecho</td>
+            <td>n = Nr. des Mehrfachechos der Ungänze m = Nr. der Ungänze, wenn Anzeigen von mehreren Ungänzen am Bildschirm erscheinen</td>
+        </tr>
+        <tr>
+            <td>5.3.1</td>
+            <td>U</td>
+            <td>-</td>
+            <td>Ungänzenecho</td>
+            <td>Anzeige eines unbekannten Reflektors im Prüfgegenstand (auch: Ungänzenanzeige)</td>
+        </tr>
+        <tr>
+            <td>5.3.2</td>
+            <td>U</td>
+            <td>-</td>
+            <td>Fehlerecho</td>
+            <td>Ungänzenanzeige, die die Zulässigkeitsgrenze erreicht oder überschreitet</td>
+        </tr>
+        <tr>
+            <td>5.4.1</td>
+            <td>R1</td>
+            <td>-</td>
+            <td>Kreisbogen am K1</td>
+            <td>100-mm Kreisbogen des Kontrollkörpers K1 für Schrägeinschallung</td>
+        </tr>
+        <tr>
+            <td>5.4.2</td>
+            <td>R2</td>
+            <td>-</td>
+            <td>Kreisbogen am K2</td>
+            <td>25 mm-Kreisbogen des Kontrollkörpers K2 bei Schrägeinschallung</td>
+        </tr>
+        <tr>
+            <td>5.4.3</td>
+            <td>B1</td>
+            <td>-</td>
+            <td>kleine Querbohrung am K1</td>
+            <td>D<sub>Z</sub> = 1,5 mm Ø</td>
+        </tr>
+        <tr>
+            <td>5.4.4</td>
+            <td>B2</td>
+            <td>-</td>
+            <td>Querbohrung am K2</td>
+            <td>D<sub>Z</sub> = 5 mm Ø</td>
+        </tr>
+        <tr>
+            <td>6.1.1</td>
+            <td>L, l</td>
+            <td>-</td>
+            <td>Längskoordinatenachse</td>
+            <td>Bei der Schweißnahtprüfung gegeben durch die Richtung der Schweißnaht. Bei anderen Prüfgegenständen: Richtung der erwarteten Längsausdehnung der Fehler</td>
+        </tr>
+        <tr>
+            <td>6.1.2</td>
+            <td>Q, q</td>
+            <td>-</td>
+            <td>Querkoordinatenachse</td>
+            <td>Achse senkrecht zur Längsachse in der Bezugsfläche</td>
+        </tr>
+        <tr>
+            <td>6.1.3</td>
+            <td>T, t</td>
+            <td>-</td>
+            <td>Tiefenkoordinatenachse</td>
+            <td>Achse senkrecht zur Bezugsfläche</td>
+        </tr>
+        <tr>
+            <td>6.1.4</td>
+            <td>l<sub>1</sub>, l<sub>2</sub></td>
+            <td>mm</td>
+            <td>Längskoordinate</td>
+            <td>Abstand in L-Richtung von der Querkoordinatenachse zum Reflektor (1) bzw. Reflektoranfang (l<sub>1</sub>) oder Reflektorende (l<sub>2</sub>)</td>
+        </tr>
+        <tr>
+            <td>6.1.5</td>
+            <td>q<sub>1</sub>, q<sub>2</sub></td>
+            <td>mm</td>
+            <td>Querkoordinate</td>
+            <td>Abstand in Q-Richtung von der Längskoordinatenachse zum Reflektor. q<sub>1</sub> = Reflektoranfang; q<sub>2</sub> = Reflektorende</td>
+        </tr>
+        <tr>
+            <td>6.1.6</td>
+            <td>t<sub>1</sub>, t<sub>2</sub></td>
+            <td>mm</td>
+            <td>Tiefenkoordinate (Tiefenlage)</td>
+            <td>Abstand von der durch L und Q aufgespannten Bezugsfläche zum Reflektor. t<sub>1</sub> = Reflektoranfang; t<sub>2</sub> = Reflektorende</td>
+        </tr>
+        <tr>
+            <td>6.2.1</td>
+            <td>s<sub>p</sub></td>
+            <td>mm</td>
+            <td>Sprungschallweg</td>
+            <td>Schallweg vom Schalleintrittspunkt bis zu der Stelle, an der der Schall nach einer Reflexion an der Gegenfläche wieder auf die Prüffläche trifft</td>
+        </tr>
+        <tr>
+            <td>6.2.2</td>
+            <td>a<sub>p</sub></td>
+            <td>mm</td>
+            <td>Sprungabstand</td>
+            <td>Der auf die Prüffläche projizierte Sprungschallweg</td>
+        </tr>
+        <tr>
+            <td>6.2.3</td>
+            <td>a'<sub>p</sub></td>
+            <td>mm</td>
+            <td>verkürzter Sprungabstand</td>
+            <td>Der um das x-Maß verkürzte Sprungabstand</td>
+        </tr>
+        <tr>
+            <td>6.3.1</td>
+            <td>a, PA</td>
+            <td>mm</td>
+            <td>Projektionsabstand</td>
+            <td>Der auf die Prüffläche projizierte Schallweg (Gegenkathete des Fehlerdreiecks)</td>
+        </tr>
+        <tr>
+            <td>6.3.2</td>
+            <td>a', vPA</td>
+            <td>mm</td>
+            <td>verkürzter Projektionsabstand</td>
+            <td>Der um das x-Maß verkürzte Projektionsabstand</td>
+        </tr>
+        <tr>
+            <td>6.3.3</td>
+            <td>Δa', Delta a'</td>
+            <td>mm</td>
+            <td>Korrektur für a'</td>
+            <td>Betrag, um den die mit Ultraschall gemessenen vPA-Werte zu korrigieren sind (AVG-Skala)</td>
+        </tr>
+        <tr>
+            <td>6.3.4</td>
+            <td>b</td>
+            <td>mm</td>
+            <td>b-Maß (Tiefenmaß)</td>
+            <td>Ankathete des "Fehlerdreiecks"</td>
+        </tr>
+        <tr>
+            <td>6.3.5</td>
+            <td>A</td>
+            <td>mm</td>
+            <td>Prüfkopfposition</td>
+            <td>Mechanisch gemessener Abstand vom Schallaustrittspunkt zu einer Koordinatenebene</td>
+        </tr>
+        <tr>
+            <td>6.3.6</td>
+            <td>A'</td>
+            <td>mm</td>
+            <td>Prüfkopfposition</td>
+            <td>Mechanisch gemessener Abstand von der Prüfkopfvorderkante zu einer Koordinatenebene</td>
+        </tr>
+        <tr>
+            <td>7.1.1</td>
+            <td>HWA</td>
+            <td>mm</td>
+            <td>Halbwertsausdehnung</td>
+            <td>Nach der Halbwert-Methode ermittelte Ausdehnung eines Reflektors durch Verschiebung des Prüfkopfs, bis H<sub>max</sub> auf die Hälfte abgefallen ist</td>
+        </tr>
+        <tr>
+            <td>7.1.2</td>
+            <td>HWL</td>
+            <td>mm</td>
+            <td>Halbwertslänge</td>
+            <td>HWA in Längsrichtung</td>
+        </tr>
+        <tr>
+            <td>7.1.3</td>
+            <td>HWB</td>
+            <td>mm</td>
+            <td>Halbwertsbreite</td>
+            <td>Bei SPK: HWA in Breitenrichtung</td>
+        </tr>
+        <tr>
+            <td>7.1.4</td>
+            <td>HWT</td>
+            <td>mm</td>
+            <td>Halbwertstiefe</td>
+            <td>HWA in Tiefenrichtung. Indizes = Methoden: A: aus der Prüfkopfverschiebung (ΔA), s: aus der Laufzeitänderung (Δs) ermittelt</td>
+        </tr>
+        <tr>
+            <td>7.2</td>
+            <td>Reg L, RL</td>
+            <td>-</td>
+            <td>Registrierlänge</td>
+            <td>Längsausdehnung, bestimmt aus der Prüfkopfverschiebung, bei der die Anzeigespitze bei vorgegebener Geräteverstärkung die Registrierlinie erreicht</td>
+        </tr>
+        <tr>
+            <td>8.1.1</td>
+            <td>BS</td>
+            <td>-</td>
+            <td>Bildschirm</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>8.1.2</td>
+            <td>BSH</td>
+            <td>-</td>
+            <td>Bildschirmhöhe</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>8.1.3</td>
+            <td>h</td>
+            <td>%</td>
+            <td>Anzeigenhöhe, (Echohöhe)</td>
+            <td>Anzeigenhöhe (Echohöhe), bezogen auf BSH</td>
+        </tr>
+        <tr>
+            <td>8.1.4</td>
+            <td>h<sub>1</sub> (h<sub>0</sub>)</td>
+            <td>%</td>
+            <td>Bezugshöhe</td>
+            <td>Echohöhe, auf die bezogen wird</td>
+        </tr>
+        <tr>
+            <td>8.1.5</td>
+            <td>h<sub>r</sub></td>
+            <td>%</td>
+            <td>Bezugene Echohöhe</td>
+            <td>Auf die Bezugshöhe bezogene Echohöhe</td>
+        </tr>
+        <tr>
+            <td>8.1.6</td>
+            <td>h<sub>2</sub>/h<sub>1</sub></td>
+            <td>-</td>
+            <td>Echohöhenverhältnis</td>
+            <td>Lineares Echohöhenverhältnis: Bezogene-/Bezugshöhe</td>
+        </tr>
+        <tr>
+            <td>8.1.7</td>
+            <td>ΔH, Delta H</td>
+            <td>dB</td>
+            <td>Echohöhenmaß</td>
+            <td>ΔH = 20 lg (h<sub>2</sub>/h<sub>1</sub>) Logarithmisches Echohöhenverhältnis</td>
+        </tr>
+        <tr>
+            <td>8.1.8</td>
+            <td>ΔV, Delta V</td>
+            <td>dB</td>
+            <td>Verstärkungsmaßdifferenz</td>
+            <td>ΔV = - ΔH</td>
+        </tr>
+        <tr>
+            <td>8.2.1</td>
+            <td>VK</td>
+            <td>-</td>
+            <td>Vergleichskörper-Methode</td>
+            <td>Methode zum direkten Vergleich von Anzeigenhöhen unbekannter Reflektoren mit den Anzeigen von realen Vergleichsreflektoren aus einem Vergleichskörper</td>
+        </tr>
+        <tr>
+            <td>8.2.2</td>
+            <td>VK<sub>h</sub></td>
+            <td>-</td>
+            <td>Arbeitsweise mit Vergleichshöhe</td>
+            <td>Die zu bewertende Anzeige wird unabhängig vom Schallweg auf die gleiche BSH wie die Anzeigenspitze des Vergleichsreflektors gestellt (Vergleichshöhe: Horizontale im Bildschirm)</td>
+        </tr>
+        <tr>
+            <td>8.2.3</td>
+            <td>VK<sub>l</sub></td>
+            <td>-</td>
+            <td>Arbeitsweise mit Vergleichslinie</td>
+            <td>Die zu bewertende Anzeige wird im Bildschirm auf eine Vergleichslinie gestellt, die die schallweg- und schallschwächungsbedingte Echohöhenänderung des Vergleichsreflektors darstellt</td>
+        </tr>
+        <tr>
+            <td>8.2.4</td>
+            <td>Bl</td>
+            <td>-</td>
+            <td>Bezugslinienmethode</td>
+            <td>Methode zur indirekten Bewertung von Anzeigenhöhen durch Bezug auf die Anzeigenhöhe eines Bezugsreflektors unter Berücksichtigung akustischer Gesetzmäßigkeiten</td>
+        </tr>
+        <tr>
+            <td>8.2.5</td>
+            <td>AVG</td>
+            <td>-</td>
+            <td>AVG-Methode</td>
+            <td>Bezugslinienmethode, bei der als Bezugsreflektoren senkrecht vom Schall getroffene KSR dienen</td>
+        </tr>
+        <tr>
+            <td>8.2.6</td>
+            <td>AVG<sub>D</sub></td>
+            <td>-</td>
+            <td>AVG-Diagramm</td>
+            <td>Darstellung relativer Verstärkungswerte in Abhängigkeit vom Abstand für Kreisscheibenreflektoren verschiedener Größe und für die Rückwand</td>
+        </tr>
+        <tr>
+            <td>8.2.7</td>
+            <td>AVG<sub>Bh</sub></td>
+            <td>-</td>
+            <td>AVG-Arbeitsweise mit Bezugshöhe</td>
+            <td>Die zu bewertende Anzeige wird auf eine Horizontale im Bildschirm gestellt. Die Wegabhängigkeit der Anzeigenhöhe muss gesondert im AVG-Diagramm berücksichtigt werden</td>
+        </tr>
+        <tr>
+            <td>8.2.8</td>
+            <td>AVG<sub>Bl</sub></td>
+            <td>-</td>
+            <td>AVG-Arbeitsweise mit Bezugslinie</td>
+            <td>Die zu bewertende Anzeige wird auf eine aus dem AVG-Diagramm auf den Bildschirm übertragene Bezugslinie für KSR gestellt</td>
+        </tr>
+        <tr>
+            <td>8.2.9</td>
+            <td>AVG<sub>Sk</sub></td>
+            <td>-</td>
+            <td>AVG-Arbeitsweise mit Skala</td>
+            <td>Es wird eine Vorsatzskala verwendet, die eine oder mehrere z.T. schallschwächungskorrigierte Bezugslinien enthält</td>
+        </tr>
+        <tr>
+            <td>8.3.1</td>
+            <td>V</td>
+            <td>dB</td>
+            <td>Verstärkungsmaß</td>
+            <td>Aus einem Diagramm oder durch akustische Gesetzmäßigkeiten gegebener Verstärkungswert</td>
+        </tr>
+        <tr>
+            <td>8.3.2</td>
+            <td>V<sub>R</sub></td>
+            <td>dB</td>
+            <td>Registrierverstärkung</td>
+            <td>Geräteverstärkung, die sich aus Grundverstärkung plus Zuschlägen ergibt</td>
+        </tr>
+        <tr>
+            <td>8.3.3</td>
+            <td>V<sub>j</sub></td>
+            <td>dB</td>
+            <td>Justiergrundverstärkung</td>
+            <td>Geräteverstärkung für die Anzeigenspitze des Justierreflektors auf Justierhöhe = Bezugshöhe (BL-Methoden)</td>
+        </tr>
+        <tr>
+            <td>8.3.4</td>
+            <td>V<sub>v</sub></td>
+            <td>dB</td>
+            <td>Vergleichsgrundverstärkung</td>
+            <td>Geräteverstärkung, mit der die Vergleichslinie aufgenommen wurde (VL-Methoden)</td>
+        </tr>
+        <tr>
+            <td>8.3.5</td>
+            <td>V<sub>RL</sub></td>
+            <td>dB</td>
+            <td>Geräteverstärkung zur Bestimmung der Registrierlänge</td>
+            <td>V<sub>RL</sub> = V<sub>R</sub> + ΔV<sub>RL</sub></td>
+        </tr>
+        <tr>
+            <td>8.3.6</td>
+            <td>V<sub>T1</sub>, V<sub>T2</sub></td>
+            <td>dB</td>
+            <td>Geräteverstärkungen bei der Transfermessung</td>
+            <td>V für die Anzeigenspitze der Durchschallung im Vergleichs- oder Justierkörper (1) bzw. im Prüfgegenstand (2) auf Vergleichshöhe bei der Bestimmung von ΔV<sub>T</sub></td>
+        </tr>
+        <tr>
+            <td>8.4.1</td>
+            <td>ΔV<sub>K</sub>, Delta V<sub>K</sub></td>
+            <td>dB</td>
+            <td>Kontrollkörperkorrektur</td>
+            <td>Korrektur, wenn ein Kreisbogen des Kontrollkörpers K1 oder K2 zur Empfindlichkeitsjustierung benutzt wurde</td>
+        </tr>
+        <tr>
+            <td>8.4.2</td>
+            <td>ΔV<sub>T</sub>, Delta V<sub>T</sub></td>
+            <td>dB</td>
+            <td>Transferkorrektur</td>
+            <td>Ausgleich der Einflüsse unterschiedlicher Oberflächen (Ankopplung) und Schallschwächung (pauschal) zwischen Vergleichs- oder Justierkörper und Prüfgegenstand</td>
+        </tr>
+        <tr>
+            <td>8.4.3</td>
+            <td>ΔV<sub>A</sub>, Delta V<sub>A</sub></td>
+            <td>dB</td>
+            <td>Ankopplungskorrektur</td>
+            <td>Transferkorrektur zur Berücksichtigung der Ankopplungsunterschiede zwischen Vergleichs- oder Justierkörper und Prüfgegenstand</td>
+        </tr>
+        <tr>
+            <td>8.4.4</td>
+            <td>ΔV<sub>Kappa</sub>, Delta V<sub>kappa</sub></td>
+            <td>dB</td>
+            <td>Schallschwächungsverluste</td>
+            <td>Korrektur der Schallschwächungsverluste, bedingt durch Streuung und Absorption</td>
+        </tr>
+        <tr>
+            <td>8.4.5</td>
+            <td>ΔV<sub>0</sub>, Delta V<sub>0</sub></td>
+            <td>dB</td>
+            <td>Korrektur für oberflächennahne Ungänzen</td>
+            <td>Verstärkungskorrektur für Reflektoren bis zu 5 mm Abstand von einer Oberfläche. ΔV<sub>0</sub> ist abhängig vom Auftreffwinkel</td>
+        </tr>
+        <tr>
+            <td>8.4.6</td>
+            <td>ΔV<sub>RL</sub>, Delta V<sub>RL</sub></td>
+            <td>dB</td>
+            <td>Registrierlängenzuschlag</td>
+            <td>Zuschlag zu V<sub>R</sub> zur Bestimmung der Registrierlänge (RL)</td>
+        </tr>
+        <tr>
+            <td>8.4.7</td>
+            <td>ΔV<sub>S</sub>, Delta V<sub>S</sub></td>
+            <td>dB</td>
+            <td>Entfernungsbedingte Verstärkungsdifferenz</td>
+            <td>Berücksichtigung der entfernungsbedingten Echohöhenänderungen für einen bestimmten Reflektortyp. (Im Fernfeld: Entfernungsgesetze; im Nahfeld und Übergang: Aus dem AVG-Diagramm)</td>
+        </tr>
+        <tr>
+            <td>8.4.8</td>
+            <td>ΔV<sub>*</sub>, Delta V<sub>*</sub></td>
+            <td>dB</td>
+            <td>Anhebungszuschlag</td>
+            <td>Betrag, um den die Vergleichs- bzw. Bezugslinie im Bildschirm angehoben oder abgesenkt wird</td>
+        </tr>
+        <tr>
+            <td>8.5.1</td>
+            <td>V<sub>U</sub></td>
+            <td>dB</td>
+            <td>Ungänzenverstärkung</td>
+            <td>Geräteverstärkung für die Anzeigenspitze der Ungänze auf Vergleichshöhe oder -höhe bzw. Bezugslinie oder -höhe</td>
+        </tr>
+        <tr>
+            <td>8.5.2</td>
+            <td>ΔV<sub>U</sub>, Delta V<sub>U</sub></td>
+            <td>dB</td>
+            <td>Verstärkungsdifferenz zur Registrierverstärkung</td>
+            <td>Differenz zwischen Ungänzenverstärkung V<sub>U</sub> zur Registrierverstärkung V<sub>R</sub></td>
+        </tr>
+        <tr>
+            <td>8.5.3</td>
+            <td>ΔH<sub>U</sub>, Delta H<sub>U</sub></td>
+            <td>dB</td>
+            <td>Echohöhenmaß der Ungänze</td>
+            <td>Über- oder Unterschreitung der Registriergrenze durch die Anzeigenspitze der Ungänze bei V<sub>R</sub></td>
+        </tr>
+        <tr>
+            <td>8.5.4</td>
+            <td>ΔV<sub>Z</sub>, Delta V<sub>Z</sub></td>
+            <td>dB</td>
+            <td>Zonenrandzuschlag</td>
+            <td>Verstärkungszuschlag bei der Tandemtechnik</td>
+        </tr>
+        <tr>
+            <td>9.1</td>
+            <td>L</td>
+            <td>-</td>
+            <td>Längsorientierte Anzeigenstelle</td>
+            <td>Anzeigenstelle mit Hauptausdehnung in Richtung der Längskoordinatenachse</td>
+        </tr>
+        <tr>
+            <td>9.2</td>
+            <td>Q</td>
+            <td>-</td>
+            <td>Querorientierte Anzeigenstelle</td>
+            <td>Anzeigenstelle mit Hauptausdehnung in Richtung der Querkoordinatenachse</td>
+        </tr>
+        <tr>
+            <td>9.3</td>
+            <td>flch.</td>
+            <td>-</td>
+            <td>Flächenhafte Anzeigenstelle</td>
+            <td>Anzeigenstelle, die aufgrund ihres Reflexionsverhaltens oder Echodynamik als flächenhaft bewertet wird</td>
+        </tr>
+        <tr>
+            <td>9.4</td>
+            <td>vol.</td>
+            <td>-</td>
+            <td>Volumenhafte Anzeigenstelle</td>
+            <td>Anzeigenstelle, die aufgrund ihres Reflexionsverhaltens oder Echodynamik als volumenhaft bewertet wird</td>
+        </tr>
+
+        
+                <tr>
+                    <td>-</td>
+                    <td>V<sub>v</sub></td>
+                    <td>dB</td>
+                    <td>Vergleichsempfindlichkeit</td>
+                    <td>Empfindlichkeitseinstellung für die Anzeige eines Reflektors auf Vergleichshöhe</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>ΔV</td>
+                    <td>dB</td>
+                    <td>Verstärkungszuschlag</td>
+                    <td>Zuschlag zur Empfindlichkeit, um kleine oder ungünstig orientierte Reflektoren nachzuweisen</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>V<sub>R</sub></td>
+                    <td>dB</td>
+                    <td>Registrierempfindlichkeit</td>
+                    <td>Summe aus Vergleichsempfindlichkeit und Verstärkungszuschlag</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>ΔV<sub>U</sub></td>
+                    <td>dB</td>
+                    <td>Verstärkungsunterschied</td>
+                    <td>Unterschied zwischen Ungänzenverstärkung und Registrierverstärkung</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>D</td>
+                    <td>mm</td>
+                    <td>Durchmesser</td>
+                    <td>Durchmesser einer Bohrung oder eines Reflektors</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>D<sub>KSR</sub></td>
+                    <td>mm</td>
+                    <td>Kreisscheibendurchmesser</td>
+                    <td>Durchmesser des Kreisscheibenreflektors</td>
+                </tr>
+            </tbody>
+        </table>
+    </tbody>
+</table>
+
+</body>
+</html>
